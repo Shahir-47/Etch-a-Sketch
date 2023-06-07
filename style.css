@@ -1,12 +1,41 @@
+@font-face {
+    font-family: 'neon';
+    src: url('./font/hellodenverdisplayregular_v1.6.eot');
+    src: url('./font/hellodenverdisplayregular_v1.6.eot?#iefix') format('embedded-opentype'),
+         url('./font/hellodenverdisplayregular_v1.6.woff') format('woff'),
+         url('./font/hellodenverdisplayregular_v1.6.ttf') format('truetype'),
+         url('./font/hellodenverdisplayregular_v1.6.svg#HELLODENVERDISPLAYREGULARRg') format('svg');
+}
+
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: neon;
+    color: #fff;
+    background-color: #010a01;
+    text-align: center;
+}
 
+.dash {
+    color: #fff;
+    text-shadow:
+    0 0 7px #ffffff,
+    0 0 10px #ffffff,
+    0 0 21px #ffffff,
+    0 0 42px #fefefe,
+    0 0 82px #fefefe,
+    0 0 92px #fefefe,
+    0 0 102px #fefefe,
+    0 0 151px #fefefe;
 }
 
 .grid {
-    border: 2px solid black;
+    background-color: #fff;
+    border: 5px double #2dd9fe;
+    box-shadow: 0 0 2px #00a3d5, 0 0 3px #00a3d5, 0 0 5px #00a3d5, 0 0 10px #2dd9fe, 0 0 20px #2dd9fe, 0 0 23px #2dd9fe, 0 0 25px #2dd9fe, 0 0 37px #2dd9fe;
     min-height: 500px;
     min-width: 500px;
     max-height: 500px;
@@ -14,3 +43,133 @@ body {
     height: 500px;
     width: 500px;
 }
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.control-panel {
+
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 5px double #FF53cd;
+    box-shadow: 0 0 2px #e10361, 0 0 3px #e10361, 0 0 5px #e10361, 0 0 10px #FF53cd, 0 0 20px #FF53cd, 0 0 23px #FF53cd, 0 0 25px #FF53cd, 0 0 37px #FF53cd;
+    padding: 20px;
+    width: 200px;
+    height: 450px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+h2 {
+    margin: 16px;
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: 0 0 7px #4003e6, 0 0 10px #4003e6, 0 0 21px #4003e6, 0 0 42px #9461fd, 0 0 82px #9461fd, 0 0 92px #9461fd, 0 0 102px #9461fd, 0 0 151px #9461fd;
+}
+
+.color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+}
+
+@font-face {
+    font-family: 'neon';
+    src: url('./font/hellodenverdisplayregular_v1.6.eot');
+    src: url('./font/hellodenverdisplayregular_v1.6.eot?#iefix') format('embedded-opentype'),
+         url('./font/hellodenverdisplayregular_v1.6.woff') format('woff'),
+         url('./font/hellodenverdisplayregular_v1.6.ttf') format('truetype'),
+         url('./font/hellodenverdisplayregular_v1.6.svg#HELLODENVERDISPLAYREGULARRg') format('svg');
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 4.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+h1 .etch{
+    color: #fff;
+    text-shadow:
+        0 0 7px #D30302,
+        0 0 10px #D30302,
+        0 0 21px #D30302,
+        0 0 42px #FF5161,
+        0 0 82px #FF5161,
+        0 0 92px #FF5161,
+        0 0 102px #FF5161,
+        0 0 151px #FF5161;
+}
+
+h1 .a{
+    color: #fff;
+    text-shadow:
+        0 0 7px #b48505,
+        0 0 10px #b48505,
+        0 0 21px #b48505,
+        0 0 42px #ffdb4e,
+        0 0 82px #ffdb4e,
+        0 0 92px #ffdb4e,
+        0 0 102px #ffdb4e,
+        0 0 151px #ffdb4e;
+}
+
+h1 .sketch{
+    color: #fff;
+    text-shadow:
+        0 0 7px #02c435,
+        0 0 10px #02c435,
+        0 0 21px #02c435,
+        0 0 42px #00fe9b,
+        0 0 82px #00fe9b,
+        0 0 92px #00fe9b,
+        0 0 102px #00fe9b,
+        0 0 151px #00fe9b;
+}
+
+button{
+    font-family: neon;
+    color: white;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+button:hover {opacity: 1}

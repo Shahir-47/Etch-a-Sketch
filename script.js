@@ -16,19 +16,17 @@ function createGrid(size = 16) {
     draw();
 }
 
-function drawCustomGrid() {
-    let button = document.querySelector('#new-grid');
-    button.addEventListener('click', () => {
-        console.log('clicked');
-        let size = 0;
-        while (size > 100 || size < 1){
-            size = parseInt(prompt('Enter the number of squares per side for the new grid:\nNOTE: The maximum is 100'));
+function clearGrid() {
+    let boxes = document.querySelectorAll('.box')
+    boxes.forEach(box => {
+        if (box.style.backgroundColor != 'white'){
+            box.style.backgroundColor = 'white';
         }
     });
-    createGrid(size);
 }
 
-function draw() {
+
+function draw(color='black', rainbow=false) {
   let isDrawing = false;
 
   function startDrawing() {
@@ -41,7 +39,10 @@ function draw() {
 
   function drawBox(box) {
     if (isDrawing) {
-      box.style.backgroundColor = 'black';
+        if (rainbow) {
+            color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+        }
+        box.style.backgroundColor = color;
     }
   }
 
@@ -60,23 +61,80 @@ function draw() {
 }
 
 
-
-  
-
-function clearGrid() {
+function removeGrid() {
     let grid = document.querySelector('.grid');
     grid.innerHTML = '';
 }
 
-     
-createGrid();
+function gridAction() {
 
-const boxSlider = document.getElementById('box-slider');
-const boxCountDisplay = document.querySelectorAll('.box-count');
+    createGrid();
 
-boxSlider.addEventListener('input', () => {
-    boxCountDisplay.forEach(boxCount => boxCount.textContent = boxSlider.value);
-    clearGrid();
-    createGrid(boxSlider.value);
-  });
+    const boxSlider = document.getElementById('box-slider');
+    const boxCountDisplay = document.querySelectorAll('.box-count');
+    const eraseButton = document.querySelector('.eraser');
+    const clearButton = document.querySelector('.clear');
+    const rainbowButton = document.querySelector('.rainbow');
+    const colorButton = document.querySelector('.color');
+
+    boxSlider.addEventListener('input', () => {
+        boxCountDisplay.forEach(boxCount => boxCount.textContent = boxSlider.value);
+        removeGrid();
+        createGrid(boxSlider.value);
+    });
+
+    clearButton.onclick = clearGrid;
+
+    eraseButton.addEventListener('click', () => {
+        eraseButton.style.backgroundColor = 'black';
+        rainbowButton.style.backgroundColor = 'white';
+        draw('white');
+    });
+
+    rainbowButton.addEventListener('click', () => {
+        rainbowButton.style.backgroundColor = 'blue';
+        eraseButton.style.backgroundColor = 'white';
+        draw('white',true);
+    });
+
+    const gridlinesToggle = document.getElementById('gridlines-toggle');
+    gridlinesToggle.addEventListener('change', toggleGridlines);
+
+    window.addEventListener("load", startup, false);
+
+}
+
+function toggleGridlines() {
+    let boxes = document.querySelectorAll('.box')
+    boxes.forEach(box => {
+        if (box.style.border != 'none'){
+            box.style.border = 'none';
+        }
+        else {
+            box.style.border = '1px solid #D3D3D3';
+        }
+    });
+}
+
+
+function startup() {
+    let colorPicker;
+    colorPicker = document.querySelector("#color-picker");
+    colorPicker.value = "#000000";
+    colorPicker.addEventListener("input", updateFirst, false);
+    colorPicker.addEventListener("change", updateAll, false);
+    colorPicker.select();
+}
+
+function updateFirst(event) {
+    draw(event.target.value);
+}
+
+function updateAll(event) {
+    document.querySelectorAll("p").forEach((p) => {
+      draw(event.target.value);
+    });
+}
+
+gridAction();
 
