@@ -49,6 +49,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 100px;
+
+    margin-bottom: 50px;
 }
 
 .control-panel {
@@ -75,6 +77,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -86,9 +89,88 @@ h2 {
 
 .color{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     align-items: center;
     margin: 16px;
+}
+
+.footer,
+.slider label,
+.grid-line label,
+.color label{
+    text-shadow:
+        0 0 7px #ffffff,
+        0 0 10px #ffffff,
+        0 0 21px #ffffff,
+        0 0 42px #fefefe,
+        0 0 82px #fefefe,
+        0 0 92px #fefefe,
+        0 0 102px #fefefe,
+        0 0 151px #fefefe;
+}
+
+.grid-line{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.color label{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#color-picker{
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+}
+
+input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+}
+
+.rainbow {
+    text-shadow:
+        0 0 7px #02c435,
+        0 0 10px #02c435,
+        0 0 21px #02c435,
+        0 0 42px #00fe9b,
+        0 0 82px #00fe9b,
+        0 0 92px #00fe9b,
+        0 0 102px #00fe9b,
+        0 0 151px #00fe9b;
+
+    border: 2px solid #00fe9b;
+
+}
+
+.eraser {
+    text-shadow:
+    0 0 7px #b48505,
+    0 0 10px #b48505,
+    0 0 21px #b48505,
+    0 0 42px #ffdb4e,
+    0 0 82px #ffdb4e,
+    0 0 92px #ffdb4e,
+    0 0 102px #ffdb4e,
+    0 0 151px #ffdb4e;
+
+    border: 2px solid #ffdb4e;
+}
+
+.clear {
+    text-shadow:
+    0 0 7px #D30302,
+    0 0 10px #D30302,
+    0 0 21px #D30302,
+    0 0 42px #FF5161,
+    0 0 82px #FF5161,
+    0 0 92px #FF5161,
+    0 0 102px #FF5161,
+    0 0 151px #FF5161;
+
+    border: 2px solid #FF5161;
 }
 
 @font-face {

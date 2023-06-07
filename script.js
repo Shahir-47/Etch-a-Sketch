@@ -1,4 +1,5 @@
 function createGrid(size = 16) {
+    const gridlinesToggle = document.getElementById('gridlines-toggle');
     for (let i = 0; i < size; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
@@ -9,7 +10,12 @@ function createGrid(size = 16) {
             let box = document.createElement('div');
             box.classList.add('box');
             box.id = `${i}-${j}`
-            box.style.cssText = `user-select: none; border: 1px solid #D3D3D3; width: ${500/size}px; height: ${500/size}px; min-width: 0px; min-height: 0px; max-width: ${500/size}px; max-height: ${500/size}px;`
+            if (gridlinesToggle.checked) {
+                box.style.cssText = `user-select: none; border: 1px solid #D3D3D3; width: ${500/size}px; height: ${500/size}px; min-width: 0px; min-height: 0px; max-width: ${500/size}px; max-height: ${500/size}px;`
+            }
+            else{
+                box.style.cssText = `user-select: none; width: ${500/size}px; height: ${500/size}px; min-width: 0px; min-height: 0px; max-width: ${500/size}px; max-height: ${500/size}px;`
+            }
             row.appendChild(box);
         }
     }
@@ -98,24 +104,21 @@ function gridAction() {
     });
 
     const gridlinesToggle = document.getElementById('gridlines-toggle');
-    gridlinesToggle.addEventListener('change', toggleGridlines);
+    gridlinesToggle.addEventListener('change', () => {
+        let boxes = document.querySelectorAll('.box')
+        boxes.forEach(box => {
+            if (gridlinesToggle.checked) {
+                box.style.border = '1px solid #D3D3D3';
+            }
+            else {
+                box.style.border = 'none';
+            }
+        });
+    });
 
     window.addEventListener("load", startup, false);
 
 }
-
-function toggleGridlines() {
-    let boxes = document.querySelectorAll('.box')
-    boxes.forEach(box => {
-        if (box.style.border != 'none'){
-            box.style.border = 'none';
-        }
-        else {
-            box.style.border = '1px solid #D3D3D3';
-        }
-    });
-}
-
 
 function startup() {
     let colorPicker;
@@ -131,9 +134,7 @@ function updateFirst(event) {
 }
 
 function updateAll(event) {
-    document.querySelectorAll("p").forEach((p) => {
-      draw(event.target.value);
-    });
+    draw(event.target.value);
 }
 
 gridAction();
