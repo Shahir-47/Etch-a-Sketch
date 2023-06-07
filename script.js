@@ -87,19 +87,25 @@ function gridAction() {
         boxCountDisplay.forEach(boxCount => boxCount.textContent = boxSlider.value);
         removeGrid();
         createGrid(boxSlider.value);
+        if (eraseButton.style.opacity == 1) {
+            draw('white');
+        }
+        else if (rainbowButton.style.opacity == 1) {
+            draw('white',true);
+        }
     });
 
     clearButton.onclick = clearGrid;
 
     eraseButton.addEventListener('click', () => {
-        eraseButton.style.backgroundColor = 'black';
-        rainbowButton.style.backgroundColor = 'white';
+        eraseButton.style.cssText = "opacity: 1;"
+        rainbowButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         draw('white');
     });
 
     rainbowButton.addEventListener('click', () => {
-        rainbowButton.style.backgroundColor = 'blue';
-        eraseButton.style.backgroundColor = 'white';
+        rainbowButton.style.cssText = "opacity: 1;"
+        eraseButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         draw('white',true);
     });
 

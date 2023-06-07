@@ -22,21 +22,12 @@ body {
 
 .dash {
     color: #fff;
-    text-shadow:
-    0 0 7px #ffffff,
-    0 0 10px #ffffff,
-    0 0 21px #ffffff,
-    0 0 42px #fefefe,
-    0 0 82px #fefefe,
-    0 0 92px #fefefe,
-    0 0 102px #fefefe,
-    0 0 151px #fefefe;
+
 }
 
 .grid {
     background-color: #fff;
-    border: 5px double #2dd9fe;
-    box-shadow: 0 0 2px #00a3d5, 0 0 3px #00a3d5, 0 0 5px #00a3d5, 0 0 10px #2dd9fe, 0 0 20px #2dd9fe, 0 0 23px #2dd9fe, 0 0 25px #2dd9fe, 0 0 37px #2dd9fe;
+    border: 3px double #010a01;
     min-height: 500px;
     min-width: 500px;
     max-height: 500px;
@@ -68,7 +59,6 @@ body {
     flex-direction: column;
     border-radius: 25px;
     border: 5px double #FF53cd;
-    box-shadow: 0 0 2px #e10361, 0 0 3px #e10361, 0 0 5px #e10361, 0 0 10px #FF53cd, 0 0 20px #FF53cd, 0 0 23px #FF53cd, 0 0 25px #FF53cd, 0 0 37px #FF53cd;
     padding: 20px;
     width: 200px;
     height: 450px;
@@ -85,7 +75,6 @@ h2 {
     margin: 16px;
     font-size: 2rem;
     font-weight: 400;
-    text-shadow: 0 0 7px #4003e6, 0 0 10px #4003e6, 0 0 21px #4003e6, 0 0 42px #9461fd, 0 0 82px #9461fd, 0 0 92px #9461fd, 0 0 102px #9461fd, 0 0 151px #9461fd;
 }
 
 .color{
@@ -100,15 +89,7 @@ h2 {
 .slider label,
 .grid-line label,
 .color label{
-    text-shadow:
-        0 0 7px #ffffff,
-        0 0 10px #ffffff,
-        0 0 21px #ffffff,
-        0 0 42px #fefefe,
-        0 0 82px #fefefe,
-        0 0 92px #fefefe,
-        0 0 102px #fefefe,
-        0 0 151px #fefefe;
+
 }
 
 .grid-line{
@@ -132,44 +113,20 @@ input:focus-visible {
 }
 
 .rainbow {
-    text-shadow:
-        0 0 7px #02c435,
-        0 0 10px #02c435,
-        0 0 21px #02c435,
-        0 0 42px #00fe9b,
-        0 0 82px #00fe9b,
-        0 0 92px #00fe9b,
-        0 0 102px #00fe9b,
-        0 0 151px #00fe9b;
+
 
     border: 2px solid #00fe9b;
 
 }
 
 .eraser {
-    text-shadow:
-    0 0 7px #b48505,
-    0 0 10px #b48505,
-    0 0 21px #b48505,
-    0 0 42px #ffdb4e,
-    0 0 82px #ffdb4e,
-    0 0 92px #ffdb4e,
-    0 0 102px #ffdb4e,
-    0 0 151px #ffdb4e;
+
 
     border: 2px solid #ffdb4e;
 }
 
 .clear {
-    text-shadow:
-    0 0 7px #D30302,
-    0 0 10px #D30302,
-    0 0 21px #D30302,
-    0 0 42px #FF5161,
-    0 0 82px #FF5161,
-    0 0 92px #FF5161,
-    0 0 102px #FF5161,
-    0 0 151px #FF5161;
+
 
     border: 2px solid #FF5161;
 }
@@ -202,41 +159,14 @@ h1{
 
 h1 .etch{
     color: #fff;
-    text-shadow:
-        0 0 7px #D30302,
-        0 0 10px #D30302,
-        0 0 21px #D30302,
-        0 0 42px #FF5161,
-        0 0 82px #FF5161,
-        0 0 92px #FF5161,
-        0 0 102px #FF5161,
-        0 0 151px #FF5161;
 }
 
 h1 .a{
     color: #fff;
-    text-shadow:
-        0 0 7px #b48505,
-        0 0 10px #b48505,
-        0 0 21px #b48505,
-        0 0 42px #ffdb4e,
-        0 0 82px #ffdb4e,
-        0 0 92px #ffdb4e,
-        0 0 102px #ffdb4e,
-        0 0 151px #ffdb4e;
 }
 
 h1 .sketch{
     color: #fff;
-    text-shadow:
-        0 0 7px #02c435,
-        0 0 10px #02c435,
-        0 0 21px #02c435,
-        0 0 42px #00fe9b,
-        0 0 82px #00fe9b,
-        0 0 92px #00fe9b,
-        0 0 102px #00fe9b,
-        0 0 151px #00fe9b;
 }
 
 button{
