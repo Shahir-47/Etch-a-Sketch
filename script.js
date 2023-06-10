@@ -87,6 +87,8 @@ function gridAction() {
         boxCountDisplay.forEach(boxCount => boxCount.textContent = boxSlider.value);
         removeGrid();
         createGrid(boxSlider.value);
+        const colorPicker = document.querySelector("#color-picker");
+        draw(colorPicker.value); 
         if (eraseButton.style.opacity == 1) {
             draw('white');
         }
@@ -107,6 +109,11 @@ function gridAction() {
         rainbowButton.style.cssText = "opacity: 1;"
         eraseButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         draw('white',true);
+    });
+
+    colorButton.addEventListener('click', () => {
+        eraseButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
+        rainbowButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
     });
 
     const gridlinesToggle = document.getElementById('gridlines-toggle');
