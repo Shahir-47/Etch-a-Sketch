@@ -114,6 +114,8 @@ function gridAction() {
     colorButton.addEventListener('click', () => {
         eraseButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
         rainbowButton.style.cssText = "font-family: neon; color: white; opacity: 0.6; transition: 0.3s; cursor: pointer; background-color: transparent; padding: 10px 20px; margin: 5px; transition-duration: 0.4s; font-size: 1.8rem; text-align: center; text-transform: uppercase; font-weight: 400;"
+        const colorPicker = document.querySelector("#color-picker");
+        draw(colorPicker.value); 
     });
 
     const gridlinesToggle = document.getElementById('gridlines-toggle');
