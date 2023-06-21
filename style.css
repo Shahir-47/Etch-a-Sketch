@@ -186,3 +186,51 @@ button{
 }
 
 button:hover {opacity: 1}
+
+footer{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+footer [src="./img/github.svg"]{
+    width: 2rem;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer a:focus [src="./img/github.svg"],
+footer a:hover [src="./img/github.svg"] {
+    filter: invert(1);
+}
+
+footer a:focus {
+    color: #3E75C3;
+}
+
+footer a {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+}
