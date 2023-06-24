@@ -2,7 +2,7 @@
 
 A simple Etch-a-Sketch application built with HTML, CSS, and JavaScript.
 
-![Etch-a-Sketch](./icon.png)
+![Etch-a-Sketch](./img/icon.png)
 
 ## Usage
 
